@@ -5,9 +5,12 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React from "react";
 
-const TodoForm = () => {
+import React, { ReactElement } from "react";
+
+interface Props {}
+
+function TodoForm({}: Props): ReactElement {
   return (
     <section>
       <Stack
@@ -29,10 +32,10 @@ const TodoForm = () => {
         </Typography>
         <TextField
           hiddenLabel
-          id="filled-hidden-label-small"
-          defaultValue="Small"
+          id="firstName"
           variant="filled"
           size="small"
+          value
         />
         <TextareaAutosize
           aria-label="minimum height"
@@ -43,6 +46,6 @@ const TodoForm = () => {
       </Stack>
     </section>
   );
-};
+}
 
 export default TodoForm;
